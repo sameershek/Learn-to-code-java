@@ -1,0 +1,41 @@
+import java.util.*;
+
+class A extends Thread
+{
+
+	public void run()
+	{
+	for (int i=0;i<=6;i++)
+	{
+		try
+		{
+			Thread.sleep(1000);
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		System.out.println(" "+i);
+	}
+	}
+}
+public class Threadtest
+{
+	//private static int 10;
+
+	public static void main (String args[])
+	{
+		A t=new A();
+		A t1=new A();
+		t.setPriority(10);
+//		t2.setPriority(5);
+		t.start();
+		
+	 	
+		t2.setPriority(5);
+	    t1.start();
+	    A t2 =new A();
+	    t2.start();
+	}
+
+}
